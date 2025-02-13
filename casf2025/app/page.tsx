@@ -4,14 +4,17 @@ import Divider from './components/Divider';
 import Hero from "./components/Hero";
 import FeatureCard from "./components/FeatureCard";
 import ProviderCard from "./components/ProviderCard";
+import ProviderCarousel from "./components/ProviderCarousel";
 
-// Directly use string paths since images are in public/
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const providers = [
   { name: "Oshpaz", logo: '/oshopaz-logo.png' },
   { name: "Etles Uyghur", logo: '/etles-logo.png' },
   { name: "Bereket", logo: '/bereket-logo1.png' },
   { name: "Samarkand Palav", logo: '/samarkand-logo.jpg' },
-  { name: "Yummies Bakehouse", logo: '/yummies-logo.jpg' }, // Fix: Added leading slash
+  { name: "Yummies Bakehouse", logo: '/yummies-logo.jpg' }, 
 ];
 
 export default function Home() {
@@ -38,6 +41,9 @@ export default function Home() {
           />
         ))}
       </section>
+
+      <h1 className="text-center text-3xl my-8">Our Providers</h1>
+      <ProviderCarousel providers={providers} />
 
       <footer className="footer">
         <p>&copy; {new Date().getFullYear()} CASF. All Rights Reserved.</p>

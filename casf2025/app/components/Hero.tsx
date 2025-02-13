@@ -1,7 +1,6 @@
 "use client";
 
 import Image from 'next/image';
-
 import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
@@ -32,6 +31,19 @@ const Hero = () => {
             {/* Hero Section */}
             <header className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
                 <div className="flex flex-col items-center">
+                    {/* Logo */}
+                    <div className={`absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                        transition-all duration-1000 ease
+                        ${isAnimating ? 'opacity-20 scale-125' : 'opacity-0 scale-75'}`}>
+                        <Image
+                            src="/casfLogo.png" 
+                            alt="CASF Logo"
+                            width={1000}
+                            height={1000}
+                            className="object-contain"
+                        />
+                    </div>
+
                     {/* Animated Title */}
                     <div className="flex justify-center items-center mb-4">
                         {title.split('').map((letter, index) => (
@@ -48,16 +60,19 @@ const Hero = () => {
                             </span>
                         ))}
                     </div>
-                    {/* Subtitles */}
                     <div
                         className={`text-center transition-opacity duration-600 ease-in-out ${
                             isAnimating ? 'opacity-100' : 'opacity-0'
                         }`}
                     >
-                        <p className="font-sans font-light uppercase tracking-wider text-[1rem] sm:text-[1.25rem] text-gray-700 max-w-xl leading-relaxed mb-2">
+                        <p className="font-sans font-light uppercase tracking-wider 
+                                        text-base sm:text-lg md:text-xl text-gray-700 
+                                        max-w-xl leading-relaxed mb-2">
                             Central Asian Spring Festival
                         </p>
-                        <p className="font-sans font-light uppercase tracking-wider text-[1rem] sm:text-[1.25rem] text-gray-700 max-w-xl leading-relaxed">
+                        <p className="font-sans font-light uppercase tracking-wider 
+                                        text-base sm:text-lg md:text-xl text-gray-700 
+                                        max-w-xl leading-relaxed mb-2">
                             A celebration of culture, music, and art.
                         </p>
                     </div>
