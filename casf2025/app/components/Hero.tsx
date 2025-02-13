@@ -20,11 +20,11 @@ const Hero = () => {
             {/* Background Image with overlay */}
             <div className="absolute inset-0">
                 <Image
-                    src= '/backgroundOne.png'
+                    src="/backgroundOne.png"
                     alt="Background"
-                    className="w-full h-full object-cover"
-                    width={1920}
-                    height={1080}   
+                    fill
+                    className="object-cover object-left sm:object-center"
+                    sizes="(max-width: 768px) 100vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-black opacity-40" />
             </div>

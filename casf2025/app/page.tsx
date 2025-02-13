@@ -16,12 +16,12 @@ const providers = [
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="flex flex-col gap-0 p-0">
       <Hero />
 
       <Divider text="Key Details" />
 
-      <section className="features">
+      <section className="features flex flex-row cente paddin-1">
         <FeatureCard title="Date" content="Saturday, February 22nd" />
         <FeatureCard title="Time" content="11:00 - 16:00" />
         <FeatureCard title="Location" content="Gordon Square, UCL" />
