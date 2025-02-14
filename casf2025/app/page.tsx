@@ -8,6 +8,8 @@ import ProviderCarousel from "./components/ProviderCarousel";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CulinaryJourney from './components/Restuarants';
+
 
 const providers = [
   { name: "Oshpaz", logo: '/oshopaz-logo.png' },
@@ -18,10 +20,17 @@ const providers = [
 ];
 
 const sponsors = [
-  { name: "KAZ Minerals", logo: '/ucl-logo.png' },
-  { name: "Kazakh Societies Guild", logo: '/isoc-logo.png' },
-  { name: "Kazakh Society UK", logo: '/acs-logo.png' },
-  { name: "smartroom", logo: '/afg-logo.png' },
+  { name: "KAZ Minerals", logo: '/SponsorsLogos/KAZMineralsLogo.png' },
+  { name: "Kazakh Societies Guild", logo: '/SponsorsLogos/KazGuildLogo.png' },
+  { name: "Kazakh Society UK", logo: '/SponsorsLogos/KazSocLogo.jpg' },
+  { name: "smartroom", logo: '/SponsorsLogos/SmartRoomLogo.png' },
+];
+
+const exhibition = [
+  { name: "KAZ Minerals", logo: '/SponsorsLogos/KAZMineralsLogo.png' },
+  { name: "Kazakh Societies Guild", logo: '/SponsorsLogos/KazGuildLogo.png' },
+  { name: "Kazakh Society UK", logo: '/SponsorsLogos/KazSocLogo.jpg' },
+  { name: "smartroom", logo: '/SponsorsLogos/SmartRoomLogo.png' },
 ];
 
 export default function Home() {
@@ -29,45 +38,71 @@ export default function Home() {
     <div className="flex flex-col gap-0 p-0">
       <Hero />
 
-      <Divider text="Key Details" />
+      <section className='bg-[#f8f0e9]'>
+      <Divider text="Key Details"/>
+      </section>
+    
 
 
-
-      <section className="features grid grid-cols-1 md:flex md:flex-row justify-center items-center gap-8 py-8 px-4 ">
+      <section className="features grid grid-cols-1 md:flex md:flex-row justify-center items-center gap-8 py-8 px-4 bg-[#f8f0e9] ">
         <FeatureCard title="Date" content="Saturday, February 22nd" />
         <FeatureCard title="Time" content="11:00 - 16:00" />
         <FeatureCard title="Location" content="Gordon Square, UCL"/>
       </section>
 
-      <Divider text="Organized by" />
-
-      <section>
-
+      <section className='bg-[#f8f0e9]'>
+      <Divider text="Organized By"/>
       </section>
 
-      <Divider text="A heartfelt thank you to our incredible sponsors" />
-
-      <section>
-        
+      <section className="flex flex-col md:flex-row items-center justify-center gap-4 py-8 bg-[#f8f0e9]">
+        <ProviderCard
+          name="UCL Kazakh Society"
+          logo="/uclKazakhSociety.png"
+        />
+        <ProviderCard
+          name="UCL Uzbek Society"
+          logo="/uclUzbekSociety.png"
+        />
       </section>
 
-      <Divider text="Food Providers" />
+      <section className='bg-[#f8f0e9]'>
+      <Divider text="Our Inredible Sponsors"/>
+      </section>
 
-      <section className="features features flex flex-row justify-center items-center gap-8 py-8">
-        {providers.map((provider) => (
+      <section className="flex flex-col md:flex-row items-center justify-center gap-4 py-8 bg-[#f8f0e9]">
+      {sponsors.map((sponsors) => (
           <ProviderCard
-            key={provider.name}
-            name={provider.name}
-            logo={provider.logo} 
+            key={sponsors.name}
+            name={sponsors.name}
+            logo={sponsors.logo} 
           />
         ))}
       </section>
 
-      <h1 className="text-center text-3xl my-8">Our Providers</h1>
-      <ProviderCarousel providers={providers} />
+      <CulinaryJourney/>
 
-      <footer className="footer ">
-        <p>&copy; {new Date().getFullYear()} CASF. All Rights Reserved.</p>
+
+      <Divider text="Exhibition Participants" />
+
+      <section className="flex flex-col md:flex-row items-center justify-center gap-4 py-8">
+        {exhibition.map((exhibitor) => (
+          <ProviderCard
+        key={exhibitor.name}
+        name={exhibitor.name}
+        logo={exhibitor.logo} 
+          />
+        ))}
+      </section>
+
+      <footer className="bg-gray-100 mt-12 py-8 px-4">
+        <div className="container mx-auto flex flex-col items-center">
+          <div className="text-center mb-4">
+        <h3 className="text-xl font-semibold mb-2">Central Asian Spring Festival 2025</h3>
+          </div>
+          <div className="text-gray-500 text-sm">
+        <p>© {new Date().getFullYear()} CASF. All Rights Reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );

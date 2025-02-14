@@ -1,20 +1,19 @@
 import React from 'react';
 
 type DividerProps = {
-    text: string;
+  text: string;
 };
 
 export const Divider: React.FC<DividerProps> = ({ text }) => {
-    return (
-        <section className="px-4 py-0 bg-[#87A88E] text-white text-center">
-            <div
-                className="flex items-center justify-center m-0 font-medium tracking-[2px]"
-                style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem" }}
-            >
-                <p>{text}</p>
-            </div>
-        </section>
-    );
+  return (
+    <div className="flex items-center my-8">
+      <div className="flex-grow border-t border-gray-300"></div>
+      <span className="mx-4 text-gray-600 font-serif text-xl tracking-wide">
+        {text}
+      </span>
+      <div className="flex-grow border-t border-gray-300"></div>
+    </div>
+  );
 };
 
 export default Divider;
