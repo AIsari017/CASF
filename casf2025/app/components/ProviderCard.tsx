@@ -4,6 +4,7 @@ import Image from 'next/image';
 interface ProviderCardProps {
   logo: string;
   name: string;
+  
 }
 
 export const ProviderCard: React.FC<ProviderCardProps> = ({ logo, name }) => (

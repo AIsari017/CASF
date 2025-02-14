@@ -17,6 +17,13 @@ const providers = [
   { name: "Yummies Bakehouse", logo: '/yummies-logo.jpg' }, 
 ];
 
+const sponsors = [
+  { name: "KAZ Minerals", logo: '/ucl-logo.png' },
+  { name: "Kazakh Societies Guild", logo: '/isoc-logo.png' },
+  { name: "Kazakh Society UK", logo: '/acs-logo.png' },
+  { name: "smartroom", logo: '/afg-logo.png' },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-0 p-0">
@@ -26,10 +33,22 @@ export default function Home() {
 
 
 
-      <section className="features flex flex-row justify-center items-center gap-8 py-8">
+      <section className="features grid grid-cols-1 md:flex md:flex-row justify-center items-center gap-8 py-8 px-4 ">
         <FeatureCard title="Date" content="Saturday, February 22nd" />
         <FeatureCard title="Time" content="11:00 - 16:00" />
-        <FeatureCard title="Location" content="Gordon Square, UCL" />
+        <FeatureCard title="Location" content="Gordon Square, UCL"/>
+      </section>
+
+      <Divider text="Organized by" />
+
+      <section>
+
+      </section>
+
+      <Divider text="A heartfelt thank you to our incredible sponsors" />
+
+      <section>
+        
       </section>
 
       <Divider text="Food Providers" />
@@ -47,7 +66,7 @@ export default function Home() {
       <h1 className="text-center text-3xl my-8">Our Providers</h1>
       <ProviderCarousel providers={providers} />
 
-      <footer className="footer">
+      <footer className="footer ">
         <p>&copy; {new Date().getFullYear()} CASF. All Rights Reserved.</p>
       </footer>
     </div>
