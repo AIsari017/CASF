@@ -4,20 +4,11 @@ import Divider from './components/Divider';
 import Hero from "./components/Hero";
 import FeatureCard from "./components/FeatureCard";
 import ProviderCard from "./components/ProviderCard";
-import ProviderCarousel from "./components/ProviderCarousel";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CulinaryJourney from './components/Restuarants';
 
-
-const providers = [
-  { name: "Oshpaz", logo: '/oshopaz-logo.png' },
-  { name: "Etles Uyghur", logo: '/etles-logo.png' },
-  { name: "Bereket", logo: '/bereket-logo1.png' },
-  { name: "Samarkand Palav", logo: '/samarkand-logo.jpg' },
-  { name: "Yummies Bakehouse", logo: '/yummies-logo.jpg' }, 
-];
 
 const sponsors = [
   { name: "KAZ Minerals", logo: '/SponsorsLogos/KAZMineralsLogo.png' },
@@ -80,7 +71,6 @@ export default function Home() {
       </section>
 
       <CulinaryJourney/>
-
 
       <Divider text="Exhibition Participants" />
 
