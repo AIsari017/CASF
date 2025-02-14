@@ -67,7 +67,7 @@ const Hero = () => {
                     >
                         <p className="font-sans font-light uppercase tracking-wider 
                                         text-base sm:text-lg md:text-xl text-gray-700 
-                                        max-w-xl leading-relaxed mb-2">
+                                        max-w-xl leading-relaxed mb-2 mt-15">
                             Central Asian Spring Festival
                         </p>
                         <p className="font-sans font-light uppercase tracking-wider 

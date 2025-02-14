@@ -24,7 +24,9 @@ export default function Home() {
 
       <Divider text="Key Details" />
 
-      <section className="features flex flex-row cente paddin-1">
+
+
+      <section className="features flex flex-row justify-center items-center gap-8 py-8">
         <FeatureCard title="Date" content="Saturday, February 22nd" />
         <FeatureCard title="Time" content="11:00 - 16:00" />
         <FeatureCard title="Location" content="Gordon Square, UCL" />
@@ -32,7 +34,7 @@ export default function Home() {
 
       <Divider text="Food Providers" />
 
-      <section className="features">
+      <section className="features features flex flex-row justify-center items-center gap-8 py-8">
         {providers.map((provider) => (
           <ProviderCard
             key={provider.name}
