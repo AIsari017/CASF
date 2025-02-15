@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CulinaryJourney from './components/Restuarants';
 
+import Socials from './components/Socials';
+
 
 const sponsors = [
   { name: "KAZ Minerals", logo: '/SponsorsLogos/KAZMineralsLogo.png' },
@@ -64,7 +66,12 @@ export default function Home() {
         ))}
       </section>
       <CulinaryJourney/>
-      <footer className="bg-gray-100 mt-12 py-8 px-4">
+
+      <section className='bg-[#f8f0e9] p-8'>
+      <Socials />
+      </section>
+
+      <footer className="bg-gray-100 py-8 px-4">
         <div className="container mx-auto flex flex-col items-center">
           <div className="text-center mb-4">
         <h3 className="text-xl font-semibold mb-2">Central Asian Spring Festival 2025</h3>
