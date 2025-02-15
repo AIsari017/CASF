@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function CulinaryJourney() {
   return (
@@ -7,7 +8,7 @@ export default function CulinaryJourney() {
       style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.2 }}
     >
       {/* Background Image */}
-      <div className="absolute inset-0 bg-[url('/backgroundTwo.png')] bg-cover bg-left  bg-fixed" />
+      <div className="absolute inset-0 bg-[url('/backgroundTwo.png')] bg-cover bg-left bg-fixed" />
       <div className="absolute inset-0 bg-black opacity-60" />
 
       <div className="relative z-10 container mx-auto py-16 px-6">
@@ -25,10 +26,12 @@ export default function CulinaryJourney() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4 text-center">
               <h2 className="text-4xl font-bold flex items-center justify-center">
-                <img
+                <Image
                   src="/etles-logo.png"
                   alt="Etless Uyghur Logo"
-                  className="w-10 h-10 mr-3"
+                  className="mr-3"
+                  width={40}
+                  height={40}
                 />
                 Etless Uyghur
               </h2>
@@ -46,10 +49,12 @@ export default function CulinaryJourney() {
             </div>
             <div className="space-y-4 text-center">
               <h2 className="text-4xl font-bold flex items-center justify-center">
-                <img
+                <Image
                   src="/oshpaz-logo.png"
                   alt="Oshpaz London Logo"
-                  className="w-10 h-10 mr-3"
+                  className="mr-3"
+                  width={40}
+                  height={40}
                 />
                 Oshpaz London
               </h2>
@@ -63,19 +68,20 @@ export default function CulinaryJourney() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4 text-center">
               <h2 className="text-4xl font-bold flex items-center justify-center">
-                <img
+                <Image
                   src="/bereket-logo1.png"
                   alt="Bereket Logo"
-                  className="w-10 h-10 mr-3"
+                  className="mr-3"
+                  width={40}
+                  height={40}
                 />
                 Bereket
               </h2>
               <p className="text-xl">
-                Don't miss your chance to explore Turkemenistan's flavorful cuisine!
+                Don&apos;t miss your chance to explore Turkemenistan&apos;s flavorful cuisine!
               </p>
             </div>
             <div className="flex justify-center">
-              {/* Optional image or visual element */}
             </div>
           </div>
 
@@ -84,16 +90,18 @@ export default function CulinaryJourney() {
             <div className="flex justify-center">
             </div>
             <div className="space-y-4 text-center">
-              <h2 className="text-4xl font-bold flex items-center justify-center">
-                <img
+              <h2 className="text-3xl font-bold flex items-center justify-center">
+                <Image
                   src="/yummies-logo.png"
                   alt="Yummies Bakehouse Logo"
-                  className="w-10 h-10 mr-3"
+                  className="mr-3"
+                  width={40}
+                  height={40}
                 />
                 Yummies Bakehouse
               </h2>
               <p className="text-xl">
-                Creator of World's first Multi-flavoured Oreshki!
+                Creator of World&apos;s first Multi-flavoured Oreshki!
               </p>
             </div>
           </div>
@@ -102,10 +110,12 @@ export default function CulinaryJourney() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4 text-center">
               <h2 className="text-4xl font-bold flex items-center justify-center">
-                <img
+                <Image
                   src="/samarkand-logo.png"
                   alt="Samarkand Palav Logo"
-                  className="w-10 h-10 mr-3"
+                  className="mr-3"
+                  width={40}
+                  height={40}
                 />
                 Samarkand Palav
               </h2>
