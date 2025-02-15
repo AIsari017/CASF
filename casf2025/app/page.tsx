@@ -17,12 +17,6 @@ const sponsors = [
   { name: "smartroom", logo: '/SponsorsLogos/SmartRoomLogo.png' },
 ];
 
-const exhibition = [
-  { name: "KAZ Minerals", logo: '/SponsorsLogos/KAZMineralsLogo.png' },
-  { name: "Kazakh Societies Guild", logo: '/SponsorsLogos/KazGuildLogo.png' },
-  { name: "Kazakh Society UK", logo: '/SponsorsLogos/KazSocLogo.jpg' },
-  { name: "smartroom", logo: '/SponsorsLogos/SmartRoomLogo.png' },
-];
 
 export default function Home() {
   return (

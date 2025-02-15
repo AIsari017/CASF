@@ -36,7 +36,6 @@ const Hero = () => {
           fill
           className="object-cover object-left sm:object-center"
           sizes="(max-width: 768px) 100vw, 100vw"
-          // Use 'fixed' on desktop, 'scroll' on mobile
           style={{ backgroundAttachment: isMobile ? 'scroll' : 'fixed' }}
         />
         <div className="absolute inset-0 bg-black opacity-40" />
