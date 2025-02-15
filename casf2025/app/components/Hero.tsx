@@ -15,7 +15,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <section className="relative">
+        <section className="relative min-h-screen">
             {/* Background Image with overlay */}
             <div className="absolute inset-0">
                 <Image
@@ -24,6 +24,7 @@ const Hero = () => {
                     fill
                     className="object-cover object-left sm:object-center"
                     sizes="(max-width: 768px) 100vw, 100vw"
+                    style={{ backgroundAttachment: 'fixed' }}
                 />
                 <div className="absolute inset-0 bg-black opacity-40" />
             </div>
@@ -32,7 +33,7 @@ const Hero = () => {
             <header className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
                 <div className="flex flex-col items-center">
                     {/* Logo */}
-                    <div className={`absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                    <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                         transition-all duration-1000 ease
                         ${isAnimating ? 'opacity-20 scale-125' : 'opacity-0 scale-75'}`}>
                         <Image
@@ -49,10 +50,13 @@ const Hero = () => {
                         {title.split('').map((letter, index) => (
                             <span
                                 key={index}
-                                className={`inline-block mx-[0.1em] font-playfair font-extrabold
+                                className={`inline-block mx-[0.1em] font-extrabold
                                     transition-all duration-[800ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)]
                                     ${isAnimating ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full'}`}
-                                style={{ transitionDelay: `${index * 0.2}s` }}
+                                style={{ 
+                                    transitionDelay: `${index * 0.2}s`,
+                                    fontFamily: "'Playfair Display', serif"
+                                }}
                             >
                                 <span className="text-[3.5rem] sm:text-[4.5rem] lg:text-[15rem] text-[#2c502f]">
                                     {letter}
@@ -65,14 +69,16 @@ const Hero = () => {
                             isAnimating ? 'opacity-100' : 'opacity-0'
                         }`}
                     >
-                        <p className="font-sans font-light uppercase tracking-wider 
-                                        text-base sm:text-lg md:text-xl text-gray-700 
-                                        max-w-xl leading-relaxed mb-2 mt-15">
+                        <p style={{ fontFamily: "'Playfair Display', serif" }} 
+                           className="uppercase tracking-wider 
+                                    text-base sm:text-lg md:text-xl text-gray-700 
+                                    max-w-xl leading-relaxed mb-2 mt-15">
                             Central Asian Spring Festival
                         </p>
-                        <p className="font-sans font-light uppercase tracking-wider 
-                                        text-base sm:text-lg md:text-xl text-gray-700 
-                                        max-w-xl leading-relaxed mb-2">
+                        <p style={{ fontFamily: "'Playfair Display', serif" }}
+                           className="uppercase tracking-wider 
+                                    text-base sm:text-lg md:text-xl text-gray-700 
+                                    max-w-xl leading-relaxed mb-2">
                             A celebration of culture, music, and art.
                         </p>
                     </div>

@@ -8,8 +8,20 @@ export default function CulinaryJourney() {
       style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1.2 }}
     >
       {/* Background Image */}
-      <div className="absolute inset-0 bg-[url('/backgroundTwo.png')] bg-cover bg-left bg-fixed" />
-      <div className="absolute inset-0 bg-black opacity-60" />
+      <div className="absolute inset-0">
+        <Image
+          src="/backgroundTwo.png"
+          alt="Background"
+          fill
+          priority
+          className="object-cover object-left-top md:object-center"
+          sizes="100vw"
+          style={{
+            objectPosition: 'left 20%',
+          }}
+        />
+        <div className="absolute inset-0 bg-black opacity-60" />
+      </div>
 
       <div className="relative z-10 container mx-auto py-16 px-6">
         {/* Title Section */}
@@ -19,6 +31,7 @@ export default function CulinaryJourney() {
             Discover the rich and diverse flavors of Central Asian cuisine
           </p>
         </div>
+
 
         {/* Restaurant Grid */}
         <div className="space-y-16">
