@@ -53,7 +53,7 @@ export default function Home() {
       </section>
 
       <section className='bg-[#f8f0e9]'>
-      <Divider text="Our Inredible Sponsors"/>
+      <Divider text="Our Incredible Sponsors"/>
       </section>
 
       <section className="flex flex-col md:flex-row items-center justify-center gap-4 py-8 bg-[#f8f0e9]">
@@ -71,7 +71,7 @@ export default function Home() {
       <Socials />
       </section>
 
-      <footer className="bg-gray-100 py-8 px-4">
+      <footer className="bg-[#f8f0e9] py-8 px-4">
         <div className="container mx-auto flex flex-col items-center">
           <div className="text-center mb-4">
         <h3 className="text-xl font-semibold mb-2">Central Asian Spring Festival 2025</h3>
