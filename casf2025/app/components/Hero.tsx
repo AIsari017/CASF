@@ -1,11 +1,11 @@
 "use client";
 
-import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 const Hero = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
   const title = "CASF";
 
   useEffect(() => {
@@ -16,7 +16,6 @@ const Hero = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
     handleResize();
     window.addEventListener('resize', handleResize);
 
@@ -28,29 +27,28 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen">
-      {/* Background Image with overlay */}
-      <div className="absolute inset-0">
-        <Image
-          src="/backgroundOne.png"
-          alt="Background"
-          fill
-          className="object-cover object-left sm:object-center"
-          sizes="(max-width: 768px) 100vw, 100vw"
-          style={{ backgroundAttachment: isMobile ? 'scroll' : 'fixed' }}
-        />
+      {/* Background with overlay */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: "url('/backgroundOne.png')",
+          backgroundSize: 'cover',
+          backgroundPosition: isMobile ? 'left center' : 'center',
+          backgroundAttachment: isMobile ? 'scroll' : 'fixed',
+        }}
+      >
         <div className="absolute inset-0 bg-black opacity-40" />
       </div>
 
-      {/* Hero Section */}
       <header className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
         <div className="flex flex-col items-center">
-          {/* Logo */}
+          {/* Animated Logo */}
           <div
             className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
               transition-all duration-1000 ease
               ${isAnimating ? 'opacity-20 scale-125' : 'opacity-0 scale-75'}`}
           >
-            <Image
+            <img
               src="/casfLogo.png"
               alt="CASF Logo"
               width={1000}
@@ -78,6 +76,8 @@ const Hero = () => {
               </span>
             ))}
           </div>
+
+          {/* Subtitle */}
           <div
             className={`text-center transition-opacity duration-600 ease-in-out ${
               isAnimating ? 'opacity-100' : 'opacity-0'
