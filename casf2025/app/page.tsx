@@ -69,21 +69,7 @@ export default function Home() {
           />
         ))}
       </section>
-
       <CulinaryJourney/>
-
-      <Divider text="Exhibition Participants" />
-
-      <section className="flex flex-col md:flex-row items-center justify-center gap-4 py-8">
-        {exhibition.map((exhibitor) => (
-          <ProviderCard
-        key={exhibitor.name}
-        name={exhibitor.name}
-        logo={exhibitor.logo} 
-          />
-        ))}
-      </section>
-
       <footer className="bg-gray-100 mt-12 py-8 px-4">
         <div className="container mx-auto flex flex-col items-center">
           <div className="text-center mb-4">
