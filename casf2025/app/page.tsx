@@ -16,7 +16,8 @@ const sponsors = [
   { name: "KAZ Minerals", logo: '/SponsorsLogos/KAZMineralsLogo.png' },
   { name: "Kazakh Societies Guild", logo: '/SponsorsLogos/KazGuildLogo.png' },
   { name: "Kazakh Society UK", logo: '/SponsorsLogos/KazSocLogo.jpg' },
-  { name: "smartroom", logo: '/SponsorsLogos/SmartRoomLogo.png' },
+  { name: "Smartroom", logo: '/SponsorsLogos/SmartRoomLogo.png' },
+  { name: "Agrowide", logo: '/SponsorsLogos/agrowideLogo.png' },
 ];
 
 
